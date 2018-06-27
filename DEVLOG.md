@@ -24,7 +24,10 @@ compression-webpack-plugin \
 html-webpack-plugin
 
 # add foundation
-npm add react react-dom redux react-redux
+npm add react react-dom babel-polyfill 
+
+# if we need redux
+npm add redux react-redux 
 ```
 
 ```sh
@@ -333,6 +336,7 @@ src/index.ejs
 
 src/index.jsx
 ```js
+import "babel-polyfill"; // 88kb/28.7kb
 import React from 'react'
 import ReactDOM from 'react-dom'
 

@@ -1,6 +1,7 @@
+import 'babel-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
 ReactDOM.render((
-  <div children='Hello World'/>
-), document.getElementsByTagName('div')[0])
+  <div children='Hello World' />
+), document.getElementsByTagName( 'div' )[0])
