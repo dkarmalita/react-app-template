@@ -149,7 +149,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['*', '.js', '.jsx'],
+    extensions: ['*', '.js', '.jsx', '.scss'],
     alias: {
       'package.json': path.resolve(__dirname, './package.json'),
       '@kard/pkg': path.resolve(__dirname, '../pkg')
