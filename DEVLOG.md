@@ -26,9 +26,13 @@ html-webpack-plugin
 # add foundation
 npm add react react-dom babel-polyfill 
 
-# if we need redux
+# if you need redux
 npm add redux react-redux 
 ```
+
+Notes:
+* [babel-polyfill vs babel-runtime](https://codersmind.com/babel-polyfill-babel-runtime-explained/)
+* [babel-runtime setup](https://babeljs.io/docs/en/babel-plugin-transform-runtime)
 
 ```sh
 mkdir static
