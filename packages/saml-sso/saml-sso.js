@@ -53,7 +53,7 @@ function redirectTo(url){
  */
 function processServerLogin({ search }){
   const callbackUrl = 'http://localhost:9000/callback'
-  const urlToAuthorize = search.substring( search.indexOf('?') + 1 ); // http://frontend.com/mypath
+  const urlToAuthorize = document.referrer
   const ssoToken = '1234567890'
   redirectTo(`${callbackUrl}?${urlToAuthorize}#${ssoToken}`)
 }
@@ -75,7 +75,7 @@ function processAppCallback({ hash, search }, localStorageId){
   redirectTo(returnPath)
 }
 
-function ensureLogin({ callbackRoute, loginPageUrl, localStorageId }){
+export function ensureLogin({ callbackRoute, loginPageUrl, localStorageId }){
   const parsedUrl = parseUrl(window.location.href)
   switch (parsedUrl.pathname) {
 
@@ -100,23 +100,7 @@ function ensureLogin({ callbackRoute, loginPageUrl, localStorageId }){
 
       // If there is no token in the local storage, redirect to the SSO login page.
       if( !localStorage.getItem(localStorageId) ){
-
-        // @example: https://sso-server.org/login#http://localhost:9000/mypath
-        redirectTo(`${loginPageUrl}?${window.location.href}`)
+        redirectTo(`${loginPageUrl}`)
       }
   }
 }
-
-/**
- * This call will test the current login status (check if the SSO token exists), process the login sequence if necessary, and return the application to the current path within the token in the local storage.
- */
-ensureLogin({
-  loginPageUrl: 'https://sso-server.org/login',
-  // SSO server's login page to redirect
-
-  callbackRoute: '/callback',
-  // application's callback URL (has to be addressed by SSO server)
-
-  localStorageId: 'ssoToken',
-  // The id of SSO token in the local storage.
-})

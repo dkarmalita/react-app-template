@@ -1,0 +1,37 @@
+// https://stackoverflow.com/a/29725313
+
+.loading{
+    width:100%;
+    margin:0 auto;
+    height:2px;
+    background-color:lightblue;
+    position:relative;
+    transition: all 300ms ease-in-out;
+}
+
+.loading:hover{
+    height:20px;
+}
+
+.loading:before, .loading:after{
+    content:"";
+    display:block;
+    height:100%;
+    position:absolute;
+    background-color:blue;
+    animation:motion 2s infinite ease;
+    border-radius:3px;
+}
+
+.loading:after{
+    animation-delay:600ms;
+}
+
+@keyframes motion{
+    0% {left:0; width:0;}
+    20% {left:20%; width:60%;}
+    40% {left:30%; width:20%;}
+    60% {left:60%; width:10%;}
+    80% {left:70%; width:30%;}
+    100% {left:100%; width:0;}
+}

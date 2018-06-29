@@ -155,7 +155,8 @@ module.exports = {
       '@kard/pkg': path.resolve(__dirname, '../pkg')
     },
     modules: [
-      "node_modules",
+      'node_modules',
+      'packages',
       'src'
     ]
   },
@@ -177,6 +178,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
 
     new HtmlWebpackPlugin({
+      title: 'Report builder',
       filename: 'index.html', // target name
       favid: Date.now(), // it is reffered in template and forced favicon get updated
       template: './src/index.ejs',
