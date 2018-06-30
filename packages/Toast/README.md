@@ -1,23 +1,53 @@
-## References
+## How to use
 
-https://bitsofco.de/toast-js-a-library-for-toast-messages-2/
-https://ireade.github.io/Toast.js/
-https://github.com/ireade/Toast.js/blob/master/dist/js/Toast-ES6.js
+Please note that the Toast is NOT A JSX COMPONENT but just a JavaScript class.
 
-## Babel transpile
+Import the Toast class first 
+```js
+import { Toast } from 'Toast'
+```
 
-// https://babeljs.io/docs/en/babel-cli.html
-npx babel Toast.js --out-file script-compiled.js
-npx babel script.js --watch --out-file script-compiled.js
+Use one of the following examples to config and show the message. Use `type` to define which type of message to show: default, danger, warning, success.
 
-## Minify js
+```js
+const config = { message : 'Welcome to Toast.js!' }
+new Toast( config )
+```
 
-https://github.com/babel/minify.
-npm install babel-minify -g
-minify script-compiled.js -o script-compiled.minify.js
-minify Toast.ES6.js -o Toast.min.js
+```js
+const config = {
+  message : 'This is a danger message. You can use this for errors etc',
+  type    : 'danger',
+}
+new Toast( config )
+```
 
-## Minify css
+```js
+const config = {
+  message : 'This is a danger message. You can use this for errors etc',
+  type    : 'warning',
+}
+new Toast( config )
+```
 
-https://stackoverflow.com/a/40592964
-npx node-sass Toast.css Toast.min.css --output-style compressed
+```js
+const config = {
+  message       : 'This is an example with custom buttons',
+  type          : 'success',
+  customButtons : [
+    {
+      text    : 'Refresh the page',
+      onClick : function(){
+        window.location.reload()
+      },
+    },
+    {
+      text    : 'Follow @kard',
+      onClick : function(){
+        window.open( 'https://github.com/dkarmalita/' )
+      },
+    },
+  ],
+}
+new Toast( config )
+```

@@ -7,21 +7,21 @@ import { Toast } from 'Toast'
 import { Tabs, Loader } from 'elements'
 
 import { ssoConfig } from 'config'
-import Styleguide from 'Styleguide'
 
 ensureLogin( ssoConfig )
 
 
-const renderStyleguide = true
 
 class Main extends Component {
 
   render(){
     return (
       <div>
-        <Loader className='linear-progress-material small' />
+        <Loader material small />
 
-        <p>Click on the buttons inside the tabbed menu:</p>
+        <div style={{ height: 50 }}>
+          <p>Click on the buttons inside the tabbed menu</p>
+        </div>
 
         <Tabs
           tabs={[
@@ -58,5 +58,5 @@ class Main extends Component {
 }
 
 ReactDOM.render((
-  <div children={renderStyleguide ? <Styleguide /> : <Main />} />
+  <Main />
 ), document.getElementsByTagName( 'div' )[0])
