@@ -1,3 +1,5 @@
+## App setup
+
 ```sh
 mkdir report-builder && cd $_
 echo ''>DEVLOG.md
@@ -349,3 +351,21 @@ ReactDOM.render((
 ), document.getElementsByTagName('div')[0])
 ```
 
+## Styleguidist
+
+```sh
+npm install --save-dev react-styleguidist
+npx styleguidist server
+npx styleguidist build
+```
+
+styleguide.config.js
+```js
+module.exports = {
+  components: 'src/components/**/*.jsx'
+};
+```
+Tips:
+https://react-styleguidist.js.org/docs/components.html
+https://react-styleguidist.js.org/docs/cookbook.html#how-to-use-refs-in-examples
+src/@(components|Components)/**/*.{js,jsx,ts,tsx}

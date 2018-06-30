@@ -1,5 +1,6 @@
 // https://www.w3schools.com/howto/howto_js_tabs.asp
 import React, { Component } from 'react'
+import './Tabs.scss'
 
 export class Tabs extends Component {
 
