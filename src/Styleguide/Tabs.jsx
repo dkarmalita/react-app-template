@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Tabs } from 'Elements'
+import { Tabs } from 'elements'
 
 export default class Scene extends Component {
 

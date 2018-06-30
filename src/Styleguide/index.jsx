@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Loader } from 'Elements'
+import { Loader } from 'elements'
 import { Toast } from 'Toast'
 
 import Tabs from './Tabs'
@@ -14,13 +14,17 @@ export default class StyleguideScene extends Component {
 
       <div>
         <Divider />
-        <Loader className='linear-progress-material small' />
+
+        <Loader material small />
         <Divider />
-        <Loader className='linear-progress-material' />
+
+        <Loader material />
         <Divider />
-        <Loader className='linear-progress small' />
+
+        <Loader small />
         <Divider />
-        <Loader className='linear-progress' />
+
+        <Loader />
         <Divider />
 
         <Tabs />

@@ -4,7 +4,7 @@ import React, { Component, PureComponent } from 'react'
 import ReactDOM from 'react-dom'
 import { ensureLogin } from 'saml-sso'
 import { Toast } from 'Toast'
-import { Tabs, Loader } from 'Elements'
+import { Tabs, Loader } from 'elements'
 
 import { ssoConfig } from 'config'
 import Styleguide from 'Styleguide'

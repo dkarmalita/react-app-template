@@ -1,2 +1,2 @@
-export { Loader } from './Loader'
+export { Loader } from './Loader/Loader'
 export { Tabs } from './Tabs'
