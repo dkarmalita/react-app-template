@@ -157,7 +157,9 @@ module.exports = {
     modules: [
       'node_modules',
       'packages',
-      'src'
+      'src',
+      'src/forms',
+      '../'
     ]
   },
 

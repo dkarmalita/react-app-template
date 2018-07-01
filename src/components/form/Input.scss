@@ -1,0 +1,14 @@
+@import 'styles/config';
+
+.Input {
+  @include unfocused-border()
+  @include primary-text();
+  box-sizing: border-box;
+  border-radius: 30px;
+  padding: 0px 15px;
+  vertical-align: middle;
+  height: 30px;
+  lineHeight: 30px;
+
+  &:focus { @include focused-border() }
+}

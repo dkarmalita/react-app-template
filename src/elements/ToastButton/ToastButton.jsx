@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Toast } from 'Toast'
+import { Toast } from '@kard/toast'
 
 export default function ToastButton( props ){
   return (

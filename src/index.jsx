@@ -3,14 +3,13 @@ import 'styles'
 import React, { Component, PureComponent } from 'react'
 import ReactDOM from 'react-dom'
 import { ensureLogin } from 'saml-sso'
-import { Toast } from 'Toast'
+import { Toast } from '@kard/toast'
 import { Tabs, Loader } from 'elements'
+import { Form } from 'forms'
 
 import { ssoConfig } from 'config'
 
 ensureLogin( ssoConfig )
-
-
 
 class Main extends Component {
 
@@ -46,6 +45,7 @@ class Main extends Component {
                 <div>
                   <h3>Tokyo</h3>
                   <p>Tokyo is the capital of Japan.</p>
+                  <Form/>
                 </div>
               ),
             },

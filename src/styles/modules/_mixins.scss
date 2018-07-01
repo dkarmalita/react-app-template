@@ -1,0 +1,13 @@
+/* borders */
+@mixin unfocused-border() { border: 1px solid $border-color; border-radius: 4px; }
+@mixin focused-border() { border: 1px solid rgba($border-focused-color, .7); outline: none; }
+// @mixin focused-border() { box-shadow: 0 0 0 1px rgba($border-focused-color, .7); }
+
+/* texts */
+@mixin primary-text() { color: $dark-color; font-size: 15px; }
+@mixin secondary-text() { color: $secondary-color; font-size: 15px; }
+@mixin link-text() { color: $primary-color; font-size: 15px; }
+@mixin danger-text() { color: $danger-color; }
+
+/* background */
+@mixin bg-dark-custom() { background-color: $dark-custom-color; }

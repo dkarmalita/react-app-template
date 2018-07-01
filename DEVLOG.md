@@ -369,3 +369,17 @@ Tips:
 https://react-styleguidist.js.org/docs/components.html
 https://react-styleguidist.js.org/docs/cookbook.html#how-to-use-refs-in-examples
 src/@(components|Components)/**/*.{js,jsx,ts,tsx}
+
+## Lerna hyperproject
+
+npm install --global lerna
+mkdir lerna-repo
+cd lerna-repo
+
+## npm add ...git
+
+npm add https://github.com/dkarmalita/react-form.git
+
+## git clone ...
+
+git clone https://github.com/dkarmalita/react-form.git

@@ -1,0 +1,11 @@
+@import 'styles/config';
+
+.Link {
+  @include link-text()
+  fontWeight: 300;
+
+  &:hover {
+     text-decoration:underline;
+     cursor:pointer;
+  }
+}
