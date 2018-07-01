@@ -8,7 +8,7 @@
   padding: 0px 15px;
   vertical-align: middle;
   height: 30px;
-  lineHeight: 30px;
+  line-height: 30px;
 
   &:focus { @include focused-border() }
 }

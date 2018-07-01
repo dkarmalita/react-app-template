@@ -99,6 +99,7 @@ export class StyledForm extends React.Component {
           />
 
           <RadioButton
+            style={{ marginTop: 40 }}
             label={'Radiobutton'}
             fieldName={'radiobutton'}
             value='Radiobutton A'
