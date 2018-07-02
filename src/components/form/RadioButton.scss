@@ -34,6 +34,8 @@
     // transition: .2s;
   }
 
+  &:focus{ outline: none; }
+
   &.focused {
     &:before { @include focused-border() }
     &:focus{ outline: none; }
